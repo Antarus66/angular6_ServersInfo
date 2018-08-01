@@ -11,10 +11,10 @@
             </code>
         </span>
     </div>
-    <ul>
+    <ol reversed>
         <li class="try-info" *ngFor="let try of expandTries.reverse()" [ngClass]="{dimmed: (try.id > 5)}">
             {{ try.timestamp.toLocaleTimeString() }}:
             <span [ngClass]="{opened: try.newStatus === OPEN}" class="status">{{ try.newStatus }}</span>
         </li>
-    </ul>
+    </ol>
 </div>
