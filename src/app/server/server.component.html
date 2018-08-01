@@ -1,1 +1,20 @@
-<h2>This is a server #{{ id }}. Status: {{ getServerStatus() }}</h2>
+<div class="panel panel-default details-panel">
+    <div class="panel-body">
+        <h2>This is a server #{{ id }}. Status: {{ getServerStatus() }}</h2>
+        <button class="btn btn-primary" type="button" (click)="switchExpandDetails()">
+            Show details <span class="badge">{{ expandTries.length }}</span>
+        </button>
+        <span *ngIf="expandDetails" class="details">
+            The secret password is
+            <code>
+                <strong>*-=tuna=-*</strong>
+            </code>
+        </span>
+    </div>
+    <ul>
+        <li class="try-info" *ngFor="let try of expandTries.reverse()" [ngClass]="{dimmed: (try.id > 5)}">
+            {{ try.timestamp.toLocaleTimeString() }}:
+            <span [ngClass]="{opened: try.newStatus === OPEN}" class="status">{{ try.newStatus }}</span>
+        </li>
+    </ul>
+</div>

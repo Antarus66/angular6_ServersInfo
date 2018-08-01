@@ -1,0 +1,35 @@
+.details-panel {
+    margin: 15px;
+}
+
+.status {
+    color: darkred;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.status.opened {
+    color: darkgreen;
+}
+
+.details {
+    margin-left: 10px;
+    border: 1px solid dimgrey;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 3px;
+}
+
+.try-info {
+    font-weight: bold;
+}
+
+.dimmed {
+    color: dimgrey;
+    background-color: whitesmoke;
+    font-weight: 100;
+}
+
+.dimmed .status {
+    font-weight: 100;
+}
