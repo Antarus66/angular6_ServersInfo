@@ -1,7 +1,6 @@
 <div class="form-group">
     <input type="text" class="form-control" [(ngModel)]="newServerName">
 </div>
-<div>{{ newServerName }}</div>
 
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerCreate()">Add server</button>
 
