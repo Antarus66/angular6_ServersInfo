@@ -12,7 +12,7 @@ export class ServerComponent {
     id: number = 10;
     status: string = 'offline';
     expandDetails: boolean = false;
-    expandTries: array = [];
+    expandTries: Array<object> = [];
 
     getServerStatus() {
         return this.status;
