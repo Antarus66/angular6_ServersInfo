@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import Server from './server.interface';
 
 @Component({
     selector: 'app-server',
@@ -9,7 +10,7 @@ export class ServerComponent {
     readonly OPEN = 'OPENED';
     readonly CLOSED = 'CLOSED';
 
-    @Input() server: object;
+    @Input() server: Server;
 
     expandDetails: boolean = false;
     expandTries: Array<object> = [];
