@@ -10,10 +10,12 @@ export class ServersComponent implements OnInit {
     servers: Array<Server> = [
         {
             name: 'Test Server',
-            status: 'offline'
+            status: 'offline',
+            password: '12345678'
         }, {
             name: 'Stage Server',
-            status: 'offline'
+            status: 'offline',
+            password: 'qwerty'
         },
     ];
 
