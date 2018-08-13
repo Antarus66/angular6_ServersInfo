@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import Server from './server';
+import ExpandTry from './expandTry';
 
 @Component({
     selector: 'app-server',
@@ -13,15 +14,14 @@ export class ServerComponent {
     @Input() server: Server;
 
     expandDetails: boolean = false;
-    expandTries: Array<object> = [];
+    expandTries: Array<ExpandTry> = [];
 
     switchExpandDetails() {
         this.expandDetails = !this.expandDetails;
 
-        this.expandTries.push({
-            id: this.expandTries.length + 1,
-            timestamp: new Date(),
-            newStatus: this.expandDetails ? this.OPEN : this.CLOSED
-        });
+        const id = this.expandTries.length + 1;
+        const newStatus = this.expandDetails ? this.OPEN : this.CLOSED;
+
+        this.expandTries.push(new ExpandTry(id, newStatus));
     }
 }
