@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-server',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class ServerComponent {
     readonly OPEN = 'OPENED';
     readonly CLOSED = 'CLOSED';
+
+    @Input() serverName: string;
 
     id: number = 10;
     status: string = 'offline';
