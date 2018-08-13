@@ -1,6 +1,6 @@
 <div class="panel panel-default details-panel">
     <div class="panel-body">
-        <h2>{{ serverName }}. Status: {{ getServerStatus() }}</h2>
+        <h2>{{ server.name }}. Status: {{ server.status }}</h2>
         <button class="btn btn-primary" type="button" (click)="switchExpandDetails()">
             Show details <span class="badge">{{ expandTries.length }}</span>
         </button>

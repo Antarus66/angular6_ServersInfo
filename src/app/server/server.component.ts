@@ -9,16 +9,10 @@ export class ServerComponent {
     readonly OPEN = 'OPENED';
     readonly CLOSED = 'CLOSED';
 
-    @Input() serverName: string;
+    @Input() server: object;
 
-    id: number = 10;
-    status: string = 'offline';
     expandDetails: boolean = false;
     expandTries: Array<object> = [];
-
-    getServerStatus() {
-        return this.status;
-    }
 
     switchExpandDetails() {
         this.expandDetails = !this.expandDetails;
