@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Server from './server.interface';
+import Server from '../server/server';
 
 @Component({
   selector: 'app-servers',
@@ -32,9 +32,6 @@ export class ServersComponent implements OnInit {
 
     onServerCreate() {
       this.serverCreationStatus = `Server was created. The name is "${this.newServerName}"`;
-      this.servers.push({
-          name: this.newServerName,
-          status: 'offline'
-      });
+      this.servers.push(new Server(this.newServerName, 'offline'));
     }
 }
